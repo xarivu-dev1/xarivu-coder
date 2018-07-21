@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="MainContentGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="4"/>
+    </Style>
+    <Style x:Key="MainContentHorizontalGroupLeftGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0,0,2,0"/>
+    </Style>
+    <Style x:Key="MainContentHorizontalGroupGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="2,0"/>
+    </Style>
+    <Style x:Key="MainContentHorizontalGroupRightGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="2,0,0,0"/>
+    </Style>
+    <Style x:Key="MainContentVerticalGroupTopGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0,0,0,2"/>
+    </Style>
+    <Style x:Key="MainContentVerticalGroupGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0,2"/>
+    </Style>
+    <Style x:Key="MainContentVerticalGroupBottomGridStyle" TargetType="Grid">
+        <Setter Property="Margin" Value="0,2,0,0"/>
+    </Style>
+    <Style x:Key="VerticalGridSplitterStyle" TargetType="GridSplitter">
+        <Setter Property="Width" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+    <Style x:Key="HorizontalGridSplitterStyle" TargetType="GridSplitter">
+        <Setter Property="Height" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!-- Label that appears before (to the left of) a control in horizontal layout -->
+    <Style x:Key="HorizontalLayoutLabelStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+    </Style>
+    <!-- Text box that appears after (to the right of) a label in horizontal layout -->
+    <Style x:Key="HorizontalLayoutTextBoxStyle" TargetType="TextBox">
+        <Setter Property="Margin" Value="0,3"/>
+        <Setter Property="Padding" Value="0,2"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <!-- Password box that appears after (to the right of) a label in horizontal layout -->
+    <Style x:Key="HorizontalLayoutPasswordBoxStyle" TargetType="PasswordBox">
+        <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="Padding" Value="0,2"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <!-- Separator label placed between groups in horizontal layout -->
+    <Style x:Key="HorizontalLayoutSeparatorSpaceStyle" TargetType="TextBlock">
+        <Setter Property="Margin" Value="10,0"/>
+    </Style>
+    <!-- Multi-line text box for showing code -->
+    <Style x:Key="CodeTextBoxStyle" TargetType="TextBox">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Visible"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="FontFamily" Value="Consolas"/>
+    </Style>
+    <Style x:Key="CodeTextBoxReadOnlyStyle" TargetType="TextBox" BasedOn="{StaticResource CodeTextBoxStyle}">
+        <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
+    <Style x:Key="CommandButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Padding" Value="0,4"/>
+    </Style>
+    <Style x:Key="ImageButtonStyle" TargetType="Button">
+        <Setter Property="Padding" Value="2"/>
+    </Style>
+    <SolidColorBrush x:Key="DataGridLineBrush" Color="LightGray" />
+</ResourceDictionary>

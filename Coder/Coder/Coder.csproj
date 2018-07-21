@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F776A3E3-B145-4A80-947E-AEAE2F269DE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xarivu.Coder</RootNamespace>
+    <AssemblyName>Xarivu.Coder</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.2.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.5.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component\ObjectView\Converter\DataGridTextColumnPropertyInfoConverter.cs" />
+    <Compile Include="Component\ObjectView\ViewModel\ObjectListViewModel.cs" />
+    <Compile Include="Component\ObjectView\ViewModel\RowDataHolder.cs" />
+    <Compile Include="Component\ObjectView\View\ObjectGrid.xaml.cs">
+      <DependentUpon>ObjectGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LoginInfo.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Model\NotificationTypeEnym.cs" />
+    <Compile Include="Model\Tracked\ModelMetadata.cs" />
+    <Compile Include="Model\Tracked\Interface\IModelMetadata.cs" />
+    <Compile Include="Model\Tracked\Interface\ITrackedModelBase.cs" />
+    <Compile Include="Model\Tracked\NotifyChangeModel.cs" />
+    <Compile Include="Model\Tracked\NotifyChangeBase.cs" />
+    <Compile Include="Model\Tracked\ExtendedPropertyChangedEventArgs.cs" />
+    <Compile Include="Model\Tracked\Interface\ITrackedListBase.cs" />
+    <Compile Include="Model\Tracked\PropertyChangedNotificationType.cs" />
+    <Compile Include="Model\Tracked\TrackedListBase.cs" />
+    <Compile Include="Model\Tracked\TrackedListChangedEventArgs.cs" />
+    <Compile Include="Model\Tracked\TrackedListChangeEvent.cs" />
+    <Compile Include="Model\Tracked\TrackedListGuidBase.cs" />
+    <Compile Include="Model\Tracked\TrackedListUtilities.cs" />
+    <Compile Include="Model\Tracked\TrackedModelBase.cs" />
+    <Compile Include="Model\Tracked\TrackedModelGuidBase.cs" />
+    <Compile Include="Model\Tracked\TrackedModelValidationMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\LoginServiceBase.cs" />
+    <Compile Include="Service\NotificationService.cs" />
+    <Compile Include="Utilities\DependencyContainer.cs" />
+    <Compile Include="Utilities\ListUtilities.cs" />
+    <Compile Include="Utilities\ResourceUtilities.cs" />
+    <Compile Include="Utilities\SerializationUtilities.cs" />
+    <Compile Include="Utilities\StringUtilities.cs" />
+    <Compile Include="Utilities\ViewUtilities.cs" />
+    <Compile Include="ViewModel\DataGridBinding\DataGridBindingViewModel.cs" />
+    <Compile Include="ViewModel\DataGridBinding\IDataGridBindingViewModel.cs" />
+    <Compile Include="ViewModel\DelegateCommand.cs" />
+    <Compile Include="ViewModel\Dialog\DialogCommandParameter.cs" />
+    <Compile Include="ViewModel\Dialog\DialogServiceViewModel.cs" />
+    <Compile Include="ViewModel\Dialog\FileDialogResultEnum.cs" />
+    <Compile Include="ViewModel\Dialog\FileDialogTypeEnum.cs" />
+    <Compile Include="ViewModel\Dialog\FileDialogViewModel.cs" />
+    <Compile Include="ViewModel\Dialog\LoginViewModel.cs" />
+    <Compile Include="ViewModel\Dialog\MessageDialogTypeEnum.cs" />
+    <Compile Include="ViewModel\Dialog\MessageDialogViewModel.cs" />
+    <Compile Include="ViewModel\Dialog\ProgressDialogViewModel.cs" />
+    <Compile Include="ViewModel\NotificationViewModel.cs" />
+    <Compile Include="ViewModel\Utilities\VmUtilities.cs" />
+    <Compile Include="View\Control\CoderDatePicker.cs" />
+    <Compile Include="View\Control\CoderDecimalTextBox.cs" />
+    <Compile Include="View\Control\ToolbarButton.xaml.cs">
+      <DependentUpon>ToolbarButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\ToolbarSeparator.xaml.cs">
+      <DependentUpon>ToolbarSeparator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Converter\DataGridItemBindingVmBackgroundConverter.cs" />
+    <Compile Include="View\Converter\DataGridItemBindingVmTooltipConverter.cs" />
+    <Compile Include="View\Converter\DataGridSelectedItemIgnorePlaceholderConverter.cs" />
+    <Compile Include="View\Converter\NullRefToBoolConverter.cs" />
+    <Compile Include="View\Converter\InvertBooleanConverter.cs" />
+    <Compile Include="View\Dialog\DialogServiceControl.xaml.cs">
+      <DependentUpon>DialogServiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\IDialogCreator.cs" />
+    <Compile Include="View\Dialog\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NotificationControl.xaml.cs">
+      <DependentUpon>NotificationControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Component\ObjectView\View\ObjectGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\CommonResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\DataGridResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\Grid2ColumnLabelInputReadOnlyResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\Grid2ColumnLabelInputResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\HorizontalLayoutControlsResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resource\Xaml\MainToolbarResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Control\ToolbarButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Control\ToolbarSeparator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Dialog\DialogServiceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Dialog\LoginDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Dialog\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\NotificationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\ClearWindowContent_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

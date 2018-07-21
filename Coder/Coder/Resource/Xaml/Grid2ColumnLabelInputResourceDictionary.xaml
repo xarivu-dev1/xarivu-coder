@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CommonResourceDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=HorizontalLayoutLabelStyle}">
+    </Style>
+    <Style TargetType="TextBox" BasedOn="{StaticResource ResourceKey=HorizontalLayoutTextBoxStyle}">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=HorizontalLayoutPasswordBoxStyle}">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+    <Style x:Key="ReadOnlyTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="IsReadOnly" Value="true"/>
+    </Style>
+</ResourceDictionary>

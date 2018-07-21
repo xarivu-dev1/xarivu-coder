@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Xarivu.CoderTest.View.DataGridTestControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xarivu.CoderTest.View"
+             xmlns:coder_view_converter="clr-namespace:Xarivu.Coder.View.Converter;assembly=Xarivu.Coder"
+             xmlns:coder_view_control="clr-namespace:Xarivu.Coder.View.Control;assembly=Xarivu.Coder"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Xarivu.Coder;component/Resource/Xaml/CommonResourceDictionary.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Xarivu.Coder;component/Resource/Xaml/DataGridResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+        </Grid>
+        <Grid Grid.Row="1" DataContext="{Binding TestDataGridViewModel}">
+            <DataGrid AutoGenerateColumns="False" IsReadOnly="{Binding IsReadOnly}" CanUserAddRows="{Binding CanUserAddRows}" CanUserDeleteRows="{Binding CanUserDeleteRows}"
+                RowHeight="26"
+                ItemsSource="{Binding Items}"
+                SelectedItem="{Binding SelectedItem, Mode=TwoWay, Converter={StaticResource dataGridSelectedItemIgnorePlaceholderConverter}}"
+                HorizontalGridLinesBrush="{StaticResource DataGridLineBrush}"
+                VerticalGridLinesBrush="{StaticResource DataGridLineBrush}"
+                CellStyle="{StaticResource dataGridCellTemplateStyle}"
+                RowStyle="{StaticResource dataGridRowBackgroundStyle}"
+                AddingNewItem="DataGrid_AddingNewItem"
+                SelectionChanged="DataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Value" Width="*" Binding="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>
