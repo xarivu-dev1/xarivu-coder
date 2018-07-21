@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Xarivu</authors>
+    <owners>Xarivu</owners>
+    <licenseUrl>https://github.com/xarivu-dev1/xarivu-coder/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/xarivu-dev1/xarivu-coder</projectUrl>
+    <iconUrl>https://github.com/xarivu-dev1/xarivu-coder/blob/master/icons/coder.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Library for rapid development of WPF applications</description>
+    <releaseNotes>Initial package.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>WPF MVVM Desktop</tags>
+  </metadata>
+</package>

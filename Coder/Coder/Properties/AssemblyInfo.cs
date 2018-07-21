@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Coder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Xarivu.Coder")]
+[assembly: AssemblyDescription("Library for rapid development of WPF applications")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Xarivu")]
 [assembly: AssemblyProduct("Coder")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
